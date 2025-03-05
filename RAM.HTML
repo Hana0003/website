@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nutritional Website: Gallery Page </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+    <div id="main">
+        <div id="header">
+            <h1>Nutritional Website</h1>
+        </div>
+ 
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="motherboard.html">Healthy Eating</a></li>
+                <li><a href="CPU.HTML">Sleeping Habits</a></li>
+                <li><a href="GPU.HTML">Exercise</a></li>
+                <li><a class= "active" a href="RAM.HTML">Gallery</a></li>
+                <li><a href="CONTACT.HTML">Contact Us</a></li>
+            </ul>
+        </div>
+ 
+        </div>
+ 
+        <div id="content">
+            <div id="title">
+                <h2>Gallery Page for Nutrition</h2>
+            </div>
+ 
+ 
+ 
+            <div class="slideshow-container">
+ 
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 2</div>
+                  <img src="images/blog 2.2.png" style="width: 50%">
+                  <div class="text">Explore a world of Health and nutrition through inspiring visuals that showcase the importance of a balanced lifestyle. from wholesome, nutrient-packed meals to energizing workout routines, my gallery is designed to motivate and guide you toward better well-being. good nutrition fuels the body, providing essential vitamins and minerals that support overall health, while regular exercise keeps you active and strong. prioritizing healthy habits such as mindful eating, staying hydrated and getting enough rest can lead to long-term wellness. let these images inspire you to make positive changes and embrace a healthier, happier life!</div>
+                </div>
+               
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 2</div>
+                  <img src="images/1697990849784.jpg" style="width:60%">
+                  <div class="text">Good health starts with the right nutrition. a well-balanced diet provides the essential vitamins, minerals and nutrients needed to fuel your body and mind. eating a varity of whole foods such as fruits, vegetables, lean proteins and whole grains helps support a strong immune system, maintain enery levels and prevent illeness. staying hydrated, avoiding excessive sugar and processed food and practicing mindful eating can futher enhance your overall well-being.</div>
+                </div>
+               
+                
+ 
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+               
+                </div>
+                <br>
+               
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+               
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+               
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+               
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+               
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+    </div>
+</body>
+ 
+ 
+ 
+ 
+</html>
